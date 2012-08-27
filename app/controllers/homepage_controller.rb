@@ -3,5 +3,6 @@ class HomepageController < ApplicationController
 
   def index
     @user_info = current_user
+    @me = FbGraph::User.me(facebook_token)
   end
 end
